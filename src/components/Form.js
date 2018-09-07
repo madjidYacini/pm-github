@@ -5,7 +5,6 @@ import "bulma";
 class Form extends React.Component {
     state = { username: "" }
     handleSubmit = (event) => {
-        console.log(this.state)
 
         event.preventDefault();
         axios.get(`https://api.github.com/users/${this.state.username}/repos`)
